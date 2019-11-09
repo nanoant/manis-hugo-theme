@@ -14,7 +14,7 @@ other = "Back to Up"
 other = "Home Page"
 
 [usedTheme]
-other = "Theme used:"
+other = "built by Hugo and "
 
 [seeAlso]
 other = "See Also"
