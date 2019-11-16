@@ -1,7 +1,11 @@
 {{ partial "header" . }}
 <article>
 	<header>{{ partial "title" . }}</header>
-	{{ .Content }}
+	{{ $c := .Content }}
+	{{ $c := replaceRE "<img src=\"([^\"]*)#(\\d+)x(\\d+)\"" "<img src=\"$1\" width=\"$2\" height=\"$3\"" $c }}
+	{{ $c := replaceRE "<img src=\"([^\"]*)#([^\"]*)\""      "<img src=\"$1\" class=\"$2\"" $c }}
+	{{ $c := replaceRE "<img src=\"../../static/([^\"]*)\""  "<img src=\"/$1\"" $c }}
+	{{ $c | safeHTML }}
 </article>
 <nav class="no-print post-nav">
 {{ if .PrevInSection }}
