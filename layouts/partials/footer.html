@@ -3,7 +3,7 @@
 			<div class="u-footer">
 				<p>
 					{{ with .Site.Copyright }}
-					{{ . | safeHTML }} &ndash; {{ T "usedTheme" }} <a href="https://github.com/yursan9/manis-hugo-theme">Manis</a><br>
+					{{ . | safeHTML }} &ndash; {{ T "usedTheme" | markdownify }} <a href="https://github.com/yursan9/manis-hugo-theme">Manis</a><br>
 					{{ end }}
 					{{ with .Site.Params.LicenseURL }}
 					| <a href="{{.}}">{{ T "license" }}</a>
