@@ -4,6 +4,7 @@
 		{{ .Hugo.Generator }}
 		{{ partial "metatitle" . }}
 		{{ partial "metadesc" . }}
+		{{ with .Keywords }}<meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }} {{ end }}{{ $e }}{{ end }}">{{ end }}
 
 		{{ with .Site.Params.FaviconImg }}
 		<link rel="shortcut icon" href="{{.}}">
