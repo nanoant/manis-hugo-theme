@@ -13,6 +13,7 @@
 			{{ partial "li" . }}
 			{{- end -}}
 		</ul>
+		<a href="posts">{{ T "more" }}</a>
 	</section>
 
 	{{ $pages := where site.RegularPages "Type" "in" .Site.Params.WorkSections }}

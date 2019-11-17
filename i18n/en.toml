@@ -1,6 +1,9 @@
 [latestPost]
 other = "Latest Posts"
 
+[more]
+other = "More"
+
 [latestWork]
 other = "Latest Works"
 
